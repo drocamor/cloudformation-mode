@@ -1,4 +1,4 @@
-I edit a lot of (CloudFormation|http://aws.amazon.com/cloudformation/). I use emacs to do this, but felt the experience could be a bit nicer. 
+I edit a lot of [CloudFormation](http://aws.amazon.com/cloudformation/). I use emacs to do this, but felt the experience could be a bit nicer. 
 
 Right now this just does syntax highlighting, but I'd like it to be able to tab complete keywords in a template.
 

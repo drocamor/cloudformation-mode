@@ -37,7 +37,8 @@
    )
   "Level one font lock.")
 
-(define-derived-mode cloudformation-mode js-mode
+(define-derived-mode cloudformation-mode js-mode "CloudFormation"
   (set (make-local-variable 'font-lock-defaults) '(cloudformation-font-lock-keywords-1 t)))
 
 
+(provide 'cloudformation-mode)

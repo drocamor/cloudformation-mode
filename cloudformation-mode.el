@@ -20,12 +20,16 @@
 ;; I don't think null exists in CFN, but it does in JSON
 (defconst cloudformation-keyword-re "\\(true\\|false\\|null\\)")
 
+;; Color up references
+(defconst cloudformation-ref-re "\"Ref\"[ ]*:[ ]*\"\\([^\"]+\\)\"")
+
 ;; Color up AWS resource types
 (defconst cloudformation-aws-type-re "\"Type\"[ ]*:[ ]*\\(\"AWS::[^\"]+?\"\\)")
 
 (defconst cloudformation-font-lock-keywords-1
-  (list 
-   (list cloudformation-intrinsic-functions-re 1 font-lock-builtin-face)
+  (list
+   (list cloudformation-intrinsic-functions-re 1 font-lock-reference-face)
+   (list cloudformation-ref-re 1 font-lock-preprocessor-face)
    (list cloudformation-pseudo-parameters-re 1 font-lock-keyword-face)
    (list cloudformation-quoted-key-re 1 font-lock-keyword-face)
    (list cloudformation-quoted-int-re 1 font-lock-constant-face)
